@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Roadmap</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            background-color: #222;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        header h1 {
+            margin: 0px;
+        }
+
+        .technology-card {
+            width: 200px;
+            height: 150px;
+            background-color: #555;
+            margin: 50px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .technology-card:hover {
+            background-color: #777;
+            transform: scale(1.09);
+        }
+
+        .contact-details {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes headerAnimation {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        header {
+            animation: headerAnimation 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    
+    <h1>Technology Roadmap</h1>
+</header>
+
+<div class="technology-card" onclick="showDetails('C++')">
+    <h2>C++</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('Java')">
+    <h2>Java</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('DataScience')">
+    <h2>Data Science</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('WebDev')">
+    <h2>Web Development</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('AppDev')">
+    <h2>App Development</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('ML')">
+    <h2>Machine Learning</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('AI')">
+    <h2>Artificial Intelligence</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('C#')">
+    <h2>C#</h2>
+</div>
+
+<div class="contact-details" id="C++-details">
+    <p>Faculty: Prof. John Doe</p>
+    <p>Contact: john.doe@example.com</p>
+    <p>Documentation: <a href="https://devdocs.io/cpp/">C++ Documentation</a></p>
+</div>
+
+<div class="contact-details" id="Java-details">
+    <p>Faculty: Prof. Jane Smith</p>
+    <p>Contact: jane.smith@example.com</p>
+    <p>Documentation: <a href="https://docs.oracle.com/en/java/">Java Documentation</a></p>
+</div>
+
+<div class="contact-details" id="DataScience-details">
+    <p>Faculty: Prof. Sarah Johnson</p>
+    <p>Contact: sarah.johnson@example.com</p>
+    <p>Documentation: <a href="https://python-data-science.readthedocs.io/en/latest/">Data Science Documentation</a></p>
+</div>
+
+<div class="contact-details" id="WebDev-details">
+    <p>Faculty: Prof. Michael Brown</p>
+    <p>Contact: michael.brown@example.com</p>
+    <p>Documentation: <a href="https://developer.mozilla.org/en-US/docs/Learn">Web Development Documentation</a></p>
+</div>
+
+<div class="contact-details" id="AppDev-details">
+    <p>Faculty: Prof. David Wilson</p>
+    <p>Contact: david.wilson@example.com</p>
+    <p>Documentation: <a href="https://roadmap.sh/android">App Development Documentation</a></p>
+</div>
+
+<div class="contact-details" id="ML-details">
+    <p>Faculty: Prof. Emily Davis</p>
+    <p>Contact: emily.davis@example.com</p>
+    <p>Documentation: <a href="#">Machine Learning Documentation</a></p>
+</div>
+
+<div class="contact-details" id="AI-details">
+    <p>Faculty: Prof. Kevin Anderson</p>
+    <p>Contact: kevin.anderson@example.com</p>
+    <p>Documentation: <a href="#">Artificial Intelligence Documentation</a></p>
+</div>
+
+<div class="contact-details" id="C#-details">
+    <p>Faculty: Prof. Mark Taylor</p>
+    <p>Contact: mark.taylor@example.com</p>
+    <p>Documentation: <a href="#">C# Documentation</a></p>
+</div>
+
+<div class="technology-card" onclick="showDetails('Python')">
+    <h2>Python</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('JavaScript')">
+    <h2>JavaScript</h2>
+</div>
+
+<div class="technology-card" onclick="showDetails('React')">
+    <h2>React</h2>
+</div>
+
+<div class="contact-details" id="Python-details">
+    <p>Faculty: Prof. Laura Williams</p>
+    <p>Contact: laura.williams@example.com</p>
+    <p>Documentation: <a href="#">Python Documentation</a></p>
+</div>
+
+<div class="contact-details" id="JavaScript-details">
+    <p>Faculty: Prof. Robert Miller</p>
+    <p>Contact: robert.miller@example.com</p>
+    <p>Documentation: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript Documentation</a></p>
+</div>
+
+<div class="contact-details" id="React-details">
+    <p>Faculty: Prof. Jessica Brown</p>
+    <p>Contact: jessica.brown@example.com</p>
+    <p>Documentation: <a href="#">React Documentation</a></p>
+</div>
+
+<script>
+    function showDetails(technology) {
+        var detailsElements = document.querySelectorAll('.contact-details');
+        detailsElements.forEach(function(element) {
+            element.style.display = 'none';
+        });
+        var selectedDetails = document.getElementById(technology + '-details');
+        selectedDetails.style.display = 'block';
+        selectedDetails.classList.add('fade-in');
+    }
+</script>
+
+</body>
+</html>
